@@ -2807,6 +2807,7 @@ dependencies = [
  "chrono",
  "futures",
  "log",
+ "prost",
  "solana-account 4.3.2",
  "solana-pubkey 4.2.1",
  "solana-signature",
@@ -2814,6 +2815,7 @@ dependencies = [
  "tokio-util",
  "yellowstone-grpc-client",
  "yellowstone-grpc-proto",
+ "zstd",
 ]
 
 [[package]]
@@ -5453,6 +5455,51 @@ dependencies = [
  "cfg_aliases",
  "libc",
  "memoffset",
+]
+
+[[package]]
+name = "nolimit-live-carbon-example"
+version = "0.1.0"
+dependencies = [
+ "carbon-bonkswap-decoder",
+ "carbon-boop-decoder",
+ "carbon-core",
+ "carbon-heaven-decoder",
+ "carbon-jupiter-swap-decoder",
+ "carbon-lifinity-amm-v2-decoder",
+ "carbon-log-metrics",
+ "carbon-meteora-damm-v2-decoder",
+ "carbon-meteora-dbc-decoder",
+ "carbon-meteora-dlmm-decoder",
+ "carbon-meteora-pools-decoder",
+ "carbon-meteora-vault-decoder",
+ "carbon-moonshot-decoder",
+ "carbon-mpl-token-metadata-decoder",
+ "carbon-openbook-v2-decoder",
+ "carbon-orca-whirlpool-decoder",
+ "carbon-pump-fees-decoder",
+ "carbon-pump-swap-decoder",
+ "carbon-pumpfun-decoder",
+ "carbon-raydium-amm-v4-decoder",
+ "carbon-raydium-clmm-decoder",
+ "carbon-raydium-cpmm-decoder",
+ "carbon-raydium-launchpad-decoder",
+ "carbon-raydium-stable-swap-decoder",
+ "carbon-vertigo-decoder",
+ "carbon-virtuals-decoder",
+ "carbon-yellowstone-grpc-datasource",
+ "chrono",
+ "dotenv",
+ "env_logger",
+ "log",
+ "rustls",
+ "serde",
+ "serde_json",
+ "tokio",
+ "tokio-util",
+ "yellowstone-grpc-client",
+ "yellowstone-grpc-proto",
+ "zstd",
 ]
 
 [[package]]

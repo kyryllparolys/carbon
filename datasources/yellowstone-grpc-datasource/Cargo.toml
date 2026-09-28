@@ -24,7 +24,11 @@ async-trait = { workspace = true }
 chrono = { workspace = true }
 futures = { workspace = true }
 log = { workspace = true }
+# Yellowstone 12.x generates its messages with prost 0.14. Carbon also keeps
+# prost 0.13 for older packages, so this dependency must match Yellowstone.
+prost = "0.14.4"
 tokio = { workspace = true, features = ["full"] }
 tokio-util = { workspace = true }
 yellowstone-grpc-client = { workspace = true }
 yellowstone-grpc-proto = { workspace = true }
+zstd = "0.13.3"

@@ -1,0 +1,53 @@
+[package]
+name = "nolimit-live-carbon-example"
+version = "0.1.0"
+publish = false
+rust-version = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+carbon-core = { workspace = true }
+carbon-log-metrics = { workspace = true }
+carbon-yellowstone-grpc-datasource = { workspace = true }
+
+carbon-bonkswap-decoder = { workspace = true, features = ["serde"] }
+carbon-boop-decoder = { workspace = true, features = ["serde"] }
+carbon-heaven-decoder = { workspace = true, features = ["serde"] }
+carbon-jupiter-swap-decoder = { workspace = true, features = ["serde"] }
+carbon-lifinity-amm-v2-decoder = { workspace = true, features = ["serde"] }
+carbon-meteora-damm-v2-decoder = { workspace = true, features = ["serde"] }
+carbon-meteora-dbc-decoder = { workspace = true, features = ["serde"] }
+carbon-meteora-dlmm-decoder = { workspace = true, features = ["serde"] }
+carbon-meteora-pools-decoder = { workspace = true, features = ["serde"] }
+carbon-meteora-vault-decoder = { workspace = true, features = ["serde"] }
+carbon-moonshot-decoder = { workspace = true, features = ["serde"] }
+carbon-mpl-token-metadata-decoder = { workspace = true, features = ["serde"] }
+carbon-openbook-v2-decoder = { workspace = true, features = ["serde"] }
+carbon-orca-whirlpool-decoder = { workspace = true, features = ["serde"] }
+carbon-pump-fees-decoder = { workspace = true, features = ["serde"] }
+carbon-pump-swap-decoder = { workspace = true, features = ["serde"] }
+carbon-pumpfun-decoder = { workspace = true, features = ["serde"] }
+carbon-raydium-amm-v4-decoder = { workspace = true, features = ["serde"] }
+carbon-raydium-clmm-decoder = { workspace = true, features = ["serde"] }
+carbon-raydium-cpmm-decoder = { workspace = true, features = ["serde"] }
+carbon-raydium-launchpad-decoder = { workspace = true, features = ["serde"] }
+carbon-raydium-stable-swap-decoder = { workspace = true, features = ["serde"] }
+carbon-vertigo-decoder = { workspace = true, features = ["serde"] }
+carbon-virtuals-decoder = { workspace = true, features = ["serde"] }
+
+chrono = { workspace = true }
+dotenv = { workspace = true }
+env_logger = { workspace = true }
+log = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true, features = ["arbitrary_precision"] }
+tokio = { workspace = true, features = ["full"] }
+tokio-util = { workspace = true }
+yellowstone-grpc-proto = { workspace = true }
+yellowstone-grpc-client = { workspace = true }
+zstd = "0.13.3"
+
+[dependencies.rustls]
+default-features = false
+features = ["std", "aws_lc_rs"]
+version = "0.23.35"
