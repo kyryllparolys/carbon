@@ -36,12 +36,15 @@ carbon-vertigo-decoder = { workspace = true, features = ["serde"] }
 carbon-virtuals-decoder = { workspace = true, features = ["serde"] }
 
 chrono = { workspace = true }
+bs58 = { workspace = true }
 dotenv = { workspace = true }
 env_logger = { workspace = true }
 futures = { workspace = true }
 log = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true, features = ["arbitrary_precision"] }
+solana-instruction = { workspace = true }
+solana-pubkey = { workspace = true }
 tokio = { workspace = true, features = ["full"] }
 tokio-util = { workspace = true }
 yellowstone-grpc-proto = { workspace = true }

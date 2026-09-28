@@ -5461,6 +5461,7 @@ dependencies = [
 name = "nolimit-live-carbon-example"
 version = "0.1.0"
 dependencies = [
+ "bs58",
  "carbon-bonkswap-decoder",
  "carbon-boop-decoder",
  "carbon-core",
@@ -5496,6 +5497,8 @@ dependencies = [
  "rustls",
  "serde",
  "serde_json",
+ "solana-instruction",
+ "solana-pubkey 4.2.1",
  "tokio",
  "tokio-util",
  "yellowstone-grpc-client",
