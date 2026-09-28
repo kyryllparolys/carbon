@@ -586,7 +586,10 @@ impl Datasource for YellowstoneGrpcGeyserClient {
 
             loop {
                 let mut subscribe_request = base_subscribe_request.clone();
-                if last_processed_slot > 0 {
+                // NoLimitNodes only supports from_slot at processed commitment.
+                // Confirmed/finalized streams reconnect at the live head and rely
+                // on the disconnect journal plus a separate processed replay.
+                if last_processed_slot > 0 && commitment == Some(CommitmentLevel::Processed) {
                     subscribe_request.from_slot = Some(last_processed_slot);
                 }
                 tokio::select! {

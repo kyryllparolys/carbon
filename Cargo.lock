@@ -5491,6 +5491,7 @@ dependencies = [
  "chrono",
  "dotenv",
  "env_logger",
+ "futures",
  "log",
  "rustls",
  "serde",

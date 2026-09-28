@@ -145,11 +145,16 @@ async fn main() -> CarbonResult<()> {
         .await
         .map_err(carbon_error)?;
 
-    let previous_confirmed_slot = if env_flag("RESUME_FROM_CHECKPOINT", true) {
+    let repair_restart_gaps = env_flag("REPAIR_RESTART_GAPS", true);
+    let previous_confirmed_slot = if repair_restart_gaps && env_flag("RESUME_FROM_CHECKPOINT", true)
+    {
         checkpoint_slot(&raw_directory)
     } else {
         None
     };
+    if !repair_restart_gaps {
+        log::info!("automatic restart-gap repair is disabled");
+    }
     let startup_confirmed_slot = current_confirmed_slot(&endpoint, &token).await?;
 
     let sink = Arc::new(Mutex::new(
